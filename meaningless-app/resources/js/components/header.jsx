@@ -18,8 +18,7 @@ export default function Header(){
     return(
         <>
             <div style={headerStyle}>
-                <HamburgerButton />
-                <div style={headerTextStyle}>Muda is wealth</div>
+                <div style={headerTextStyle}>La MUDA</div>
             </div>
         </>
     )
