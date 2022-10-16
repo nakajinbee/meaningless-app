@@ -1,6 +1,21 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
 
 export default function MudaEdit() {
+    const [mudaText, setMudaText] = useState('');
+    const [mudaTime, setMudaTime] = useState(0);
+
+    function addMuda() {
+        console.log("実行しました");
+        setMudaText(mudaText + "無駄")
+    };
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setMudaTime(mudaTime => mudaTime + 1);
+        }, 1000);
+        return () => clearInterval(interval);
+      }, []);
+
     return (
         <>
             {/* ページタイトル部分 共通部品*/}
@@ -22,16 +37,17 @@ export default function MudaEdit() {
                 <div className={"error-message-area"}></div>
                 {/* ページサブボタンエリア */}
                 <div className={"sub-button-area"}>
-                    <button className={"secondary-button sub-button"}>無駄生成</button>
+                    <button className={"secondary-button sub-button"} onClick={addMuda}>無駄生成</button>
                     <div className={"muda-display-time"}>
-                        無駄にした時間：{ }
+                        無駄にした時間：{mudaTime}
                     </div>
                 </div>
                 {/* END ページサブボタンエリア */}
                 {/* フォームエリア */}
                 <div className={"form-area"}>
                     <form>
-                        <textarea className={"muda-textarea"}></textarea>
+                        <TextareaAutosize className={"muda-textarea"} name="mudaText" defaultValue={mudaText} />
+                        <input type="hidden" name="mudaTime"value={mudaTime}></input>
                     </form>
                 </div>
                 {/* END フォームエリア */}
