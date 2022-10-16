@@ -1,0 +1,40 @@
+.page-title-area-style{
+    width:100%;
+    height:50px;
+    border-bottom:solid 1px gray;
+    display:inline-block;
+}
+.page-title-text-style {
+    float:left;
+}
+
+.page-top-btn-area {
+    float:right;
+}
+
+.header-text-style {
+    display : inline-block;
+    margin-left : 50px;
+    font-size : 35px;
+    color : white;
+}
+
+.header-style {
+    height : 60px;
+    display :flex;
+    background-color : lightslategray;
+}
+
+.fotter-style {
+    background-color : gainsboro;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+}
+
+.fotter-text-style {
+    color:gray;
+    text-align: center;
+    margin-top: 7px;
+}
