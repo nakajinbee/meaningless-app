@@ -6,8 +6,8 @@ export default function Header(){
 
     return(
         <>
-            <div className={"header-style"}>
-                <div className={"header-text-style"}>La MUDA</div>
+            <div className={"header"}>
+                <div className={"header-text"}>La MUDA</div>
             </div>
         </>
     )

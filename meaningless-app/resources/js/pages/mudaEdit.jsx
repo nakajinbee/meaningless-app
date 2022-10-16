@@ -4,9 +4,9 @@ export default function MudaEdit(){
     return(
         <>
             {/* ページタイトル部分 共通部品*/}
-            <div className={"page-title-area-style"}>
-                <div className={"page-title-text-style"}>
-                    <div>無駄登録画面</div>
+            <div className={"page-title-area"}>
+                <div className={"page-title-text"}>
+                    <div className={"page-"}>無駄登録画面</div>
                     <div>無駄を登録することができます。</div>
                 </div>
                     {/* ボタンエリア */}

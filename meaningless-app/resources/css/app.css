@@ -1,10 +1,10 @@
-.page-title-area-style{
+.page-title-area{
     width:100%;
     height:50px;
     border-bottom:solid 1px gray;
     display:inline-block;
 }
-.page-title-text-style {
+.page-title-text {
     float:left;
 }
 
@@ -12,20 +12,28 @@
     float:right;
 }
 
-.header-text-style {
+.header-text{
     display : inline-block;
     margin-left : 50px;
     font-size : 35px;
     color : white;
 }
 
-.header-style {
+.header {
     height : 60px;
     display :flex;
     background-color : lightslategray;
 }
 
-.fotter-style {
+.page-title-text{
+
+}
+
+.page-subtitle-text{
+
+}
+
+.fotter {
     background-color : gainsboro;
     width: 100%;
     height: 40px;
@@ -33,7 +41,7 @@
     bottom: 0;
 }
 
-.fotter-text-style {
+.fotter-text {
     color:gray;
     text-align: center;
     margin-top: 7px;
