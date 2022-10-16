@@ -11,7 +11,7 @@
 
 .page-top-btn-area {
     float:right;
-    margin: 11px 20px ;
+    margin: 13px 20px ;
     display: flex;
     justify-content: space-between;
 }
@@ -56,20 +56,70 @@
     margin-top: 7px;
 }
 
+.main-contents-area{
+    padding:0 20px
+}
+
+.sub-button-area{
+    width:100%;
+    height:70px;
+}
+.sub-button-area button{
+    margin-top: 13px;
+}
+
+.sub-button-area div{
+    display: inline-block;
+}
+
 .form-main-button{
     width: 120px;
     height: 45px;
     font-size:28px;
+    border-radius:5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.form-main-button:active{
+    transform: translateY(4px);
+}
+
+.sub-button{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
     border-radius:5px
 }
 
 .primary-button{
     border: solid 2px lightslategray;
+    border-bottom: 3px solid rgb(58, 72, 86);
     background-color: lightslategray;
     color: white;
 }
 
+.primary-button:active{
+    border-bottom: solid 2px lightslategray;
+}
+
+
 .secondary-button{
     border: solid 2px gray;
+    border-bottom: 3px solid gray;
     background-color: white;
+}
+
+.secondary-button:active{
+    border-bottom: solid 2px gray;
+}
+
+.muda-textarea{
+    width:50%
+}
+
+.muda-display-time{
+    float:right;
 }
