@@ -1,15 +1,32 @@
 .page-title-area{
     width:100%;
-    height:50px;
+    height:70px;
     border-bottom:solid 1px gray;
     display:inline-block;
 }
-.page-title-text {
+.page-title-text-area {
     float:left;
+    margin-left: 20px;
 }
 
 .page-top-btn-area {
     float:right;
+    margin: 11px 20px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-top-btn-area button{
+    margin-left:10px;
+}
+
+
+.page-title-text{
+    font-size: 28px;
+}
+
+.page-subtitle-text{
+    color:gray;
 }
 
 .header-text{
@@ -25,14 +42,6 @@
     background-color : lightslategray;
 }
 
-.page-title-text{
-
-}
-
-.page-subtitle-text{
-
-}
-
 .fotter {
     background-color : gainsboro;
     width: 100%;
@@ -45,4 +54,22 @@
     color:gray;
     text-align: center;
     margin-top: 7px;
+}
+
+.form-main-button{
+    width: 120px;
+    height: 45px;
+    font-size:28px;
+    border-radius:5px
+}
+
+.primary-button{
+    border: solid 2px lightslategray;
+    background-color: lightslategray;
+    color: white;
+}
+
+.secondary-button{
+    border: solid 2px gray;
+    background-color: white;
 }
