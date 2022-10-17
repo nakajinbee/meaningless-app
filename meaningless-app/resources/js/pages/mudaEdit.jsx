@@ -1,20 +1,29 @@
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
 export default function MudaEdit() {
+
+    let csrf_token = document.head.querySelector(
+        'meta[name="csrf-token"]'
+    ).content
+
     const [mudaText, setMudaText] = useState('');
     const [mudaTime, setMudaTime] = useState(0);
 
     function addMuda() {
-        console.log("実行しました");
-        setMudaText(mudaText + "無駄")
+        setMudaText(mudaText + "無駄");
     };
+
     useEffect(() => {
         const interval = setInterval(() => {
             setMudaTime(mudaTime => mudaTime + 1);
         }, 1000);
         return () => clearInterval(interval);
-      }, []);
+    }, []);
+
+    function registMuda() {
+        alert("無駄を登録しました");
+    }
 
     return (
         <>
@@ -26,7 +35,7 @@ export default function MudaEdit() {
                 </div>
                 {/* ボタンエリア */}
                 <div className={"page-top-btn-area"}>
-                    <button className={"primary-button form-main-button"}>登録</button>
+                    <button className={"primary-button form-main-button"} onClick={registMuda}>登録</button>
                     <button className={"secondary-button form-main-button"}>戻る</button>
                 </div>
                 {/* ボタンエリア */}
@@ -46,8 +55,9 @@ export default function MudaEdit() {
                 {/* フォームエリア */}
                 <div className={"form-area"}>
                     <form>
-                        <TextareaAutosize className={"muda-textarea"} name="mudaText" defaultValue={mudaText} />
-                        <input type="hidden" name="mudaTime"value={mudaTime}></input>
+                        <input type="hidden" name="_token" value={csrf_token}/>
+                        <TextareaAutosize className={"muda-textarea"} name="mudaText" value={mudaText} onChange={(e) =>setMudaText(e.target.value)}/>
+                        <input type="hidden" name="mudaTime" value={mudaTime}></input>
                     </form>
                 </div>
                 {/* END フォームエリア */}
