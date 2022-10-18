@@ -22,12 +22,28 @@ export default function MudaEdit() {
         return () => clearInterval(interval);
     }, []);
 
+    const createMuda = () => {
+        alert("asdf");
+        axios
+          .post("http://localhost/api/mudaedit/create", {
+            title: title,
+            author: author,
+          })
+          .then((response) => {
+          })
+          .then(() => {
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+
     return (
         <>
             <PageTitleArea 
             title={"無駄登録画面"}
             subtitle={"無駄を登録することができます。"}
-            submitAction={""}
+            submitAction={createMuda}
             />
             {/*　ページ部分 */}
             <div className={"main-contents-area"}>
