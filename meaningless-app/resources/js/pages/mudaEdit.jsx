@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
+import PageTitleArea from "../components/pageTitleArea"
 
 export default function MudaEdit() {
 
@@ -21,26 +22,13 @@ export default function MudaEdit() {
         return () => clearInterval(interval);
     }, []);
 
-    function registMuda() {
-        alert("無駄を登録しました");
-    }
-
     return (
         <>
-            {/* ページタイトル部分 共通部品*/}
-            <div className={"page-title-area"}>
-                <div className={"page-title-text-area"}>
-                    <div className={"page-title-text"}>無駄登録画面</div>
-                    <div className={"page-subtitle-text"}>無駄テキスト登録することができます。</div>
-                </div>
-                {/* ボタンエリア */}
-                <div className={"page-top-btn-area"}>
-                    <button className={"primary-button form-main-button"} onClick={registMuda}>登録</button>
-                    <button className={"secondary-button form-main-button"}>戻る</button>
-                </div>
-                {/* ボタンエリア */}
-            </div>
-            {/* END ページタイトル部分 */}
+            <PageTitleArea 
+            title={"無駄登録画面"}
+            subtitle={"無駄を登録することができます。"}
+            submitAction={""}
+            />
             {/*　ページ部分 */}
             <div className={"main-contents-area"}>
                 <div className={"error-message-area"}></div>
@@ -54,7 +42,7 @@ export default function MudaEdit() {
                 {/* END ページサブボタンエリア */}
                 {/* フォームエリア */}
                 <div className={"form-area"}>
-                    <form>
+                    <form id="mudaForm">
                         <input type="hidden" name="_token" value={csrf_token}/>
                         <TextareaAutosize className={"muda-textarea"} name="mudaText" value={mudaText} onChange={(e) =>setMudaText(e.target.value)}/>
                         <input type="hidden" name="mudaTime" value={mudaTime}></input>
