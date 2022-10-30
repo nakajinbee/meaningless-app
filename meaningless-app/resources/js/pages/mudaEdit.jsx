@@ -25,11 +25,10 @@ export default function MudaEdit() {
     const createMuda = () => {
         alert("asdf");
         axios
-          .post("http://localhost/api/mudaedit/create", {
-            title: title,
-            author: author,
+          .post("http://localhost/api/muda", {
           })
           .then((response) => {
+            alert(response);
           })
           .then(() => {
           })
