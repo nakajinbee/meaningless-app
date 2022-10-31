@@ -15,7 +15,7 @@ class MudaController extends Controller
      */
     public function index()
     {
-        //
+        return "asdfasdf";
     }
 
     /**
@@ -26,13 +26,8 @@ class MudaController extends Controller
      */
     public function store(Request $request)
     {
-        TMuda::create(
-            [
-             'muda_text' => "無駄",
-             'waste_time' => "",
-            ]
-        );
-        return response()->json("",200);
+        $muda = TMuda::create($request->all());
+        return response()->json($muda,200);
     }
 
     /**

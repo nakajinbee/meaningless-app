@@ -26,11 +26,11 @@ export default function MudaEdit() {
         alert("asdf");
         axios
           .post("http://localhost/api/muda", {
+            mudaText : mudaText,
+            mudaTime : mudaTime,
           })
           .then((response) => {
             alert(response);
-          })
-          .then(() => {
           })
           .catch((error) => {
             console.log(error);
