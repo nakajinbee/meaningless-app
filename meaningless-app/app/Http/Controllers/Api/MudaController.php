@@ -15,7 +15,6 @@ class MudaController extends Controller
      */
     public function index()
     {
-        return "asdfasdf";
     }
 
     /**

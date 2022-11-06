@@ -6,8 +6,8 @@ CREATE TABLE t_muda (
     waste_time INT COMMENT '無駄時間' DEFAULT NULL,
     create_user VARCHAR(256) COMMENT '登録者' DEFAULT NULL,
     update_user VARCHAR(256) COMMENT '更新者' DEFAULT NULL,
-    create_at DATETIME COMMENT '登録日時' DEFAULT NULL,
-    update_at DATETIME COMMENT '更新日時'DEFAULT NULL
+    created_at DATETIME COMMENT '登録日時' DEFAULT NULL,
+    updated_at DATETIME COMMENT '更新日時'DEFAULT NULL
 );
 
 alter table t_muda comment '無駄';
