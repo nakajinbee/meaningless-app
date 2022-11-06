@@ -23,14 +23,13 @@ export default function MudaEdit() {
     }, []);
 
     const createMuda = () => {
-        alert("asdf");
         axios
           .post("http://localhost/api/muda", {
             mudaText : mudaText,
             mudaTime : mudaTime,
           })
           .then((response) => {
-            alert(response);
+            alert(response.data)
           })
           .catch((error) => {
             console.log(error);

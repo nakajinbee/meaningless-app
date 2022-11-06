@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\TMuda;
+use Exception;
 
 class MudaController extends Controller
 {
@@ -25,8 +26,10 @@ class MudaController extends Controller
      */
     public function store(Request $request)
     {
-        $muda = TMuda::create($request->all());
-        return response()->json($muda,200);
+        $muda = new TMuda();
+        $muda->waste_time = $request->mudaTime;
+        $muda->save();
+        return response()->json(["無駄を登録しました。"]);
     }
 
     /**
