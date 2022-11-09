@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-export default function PageTitleArea({ title, subtitle, hasData =false, submitAction}) {
+export default function PageTitleArea({ title, subtitle, hasData =false, submitAction, isHome=false}) {
     const buttonLabel = hasData ? "更新": "登録";
+
     return(
         <>
             {/* ページタイトル部分 共通部品*/}
@@ -11,10 +12,12 @@ export default function PageTitleArea({ title, subtitle, hasData =false, submitA
                     <div className={"page-subtitle-text"}>{subtitle}</div>
                 </div>
                 {/* ボタンエリア */}
+                {isHome ? (""):
                 <div className={"page-top-btn-area"}>
                     <button className={"primary-button form-main-button"} onClick={submitAction}>{buttonLabel}</button>
                     <button className={"secondary-button form-main-button"}>戻る</button>
                 </div>
+                }
                 {/* ボタンエリア */}
             </div>
             {/* END ページタイトル部分 */}

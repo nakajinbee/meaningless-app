@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\MudaController;
+use App\Http\Controllers\Api\MudaSummaryController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/muda', MudaController::class);
+Route::apiResource('/muda-summary', MudaSummaryController::class);
+
