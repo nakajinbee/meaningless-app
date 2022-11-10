@@ -16,6 +16,9 @@ class MudaController extends Controller
      */
     public function index()
     {
+        $muda = new TMuda();
+        $mudaList = $muda->getMudaList();
+        return $mudaList;
     }
 
     /**

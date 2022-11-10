@@ -7,12 +7,13 @@ export default function MudaSummary() {
     const [sumMudaTime, setSumMudaTime] = useState(0);
 
     useEffect(() => {
-        alert("初期取得");
         axios
         .get("http://localhost/api/muda-summary", {
         })
         .then((response) => {
             console.log(response.data);
+            setSumMudaText(response.data.muda_summary);
+            setSumMudaTime(response.data.waste_time);
         })
         .catch((error) => {
           console.log(error);

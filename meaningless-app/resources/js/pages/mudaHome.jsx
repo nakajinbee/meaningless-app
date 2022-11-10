@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import PageTitleArea from "../components/pageTitleArea"
 import MudaSummary from "../components/mudaSummary"
+import MudaList from "../components/mudaList"
 
 export default function MudaHome() {
 
@@ -28,12 +29,11 @@ export default function MudaHome() {
 
                 {/* サマリー表示 */}
                 <MudaSummary />
-
                 {/* END サマリー表示 */}
 
-                {/* 履歴表示 */}
-
-                {/* END 履歴表示 */}
+                {/* リスト表示 */}
+                <MudaList />
+                {/* END リスト表示 */}
 
             </div>
             {/*　END ページ部分 */}

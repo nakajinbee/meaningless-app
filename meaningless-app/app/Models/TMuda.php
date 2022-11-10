@@ -18,8 +18,16 @@ class TMuda extends Model
     {
         // $this::select('muda_text','waste_time')
         $summary = $this::select('waste_time')
-            ->selectRaw('char_length(muda_text)')
-            ->get();
+            ->selectRaw('char_length(muda_text) as muda_summary')
+            // ->get();
+            ->first();
         return $summary;
+    }
+
+
+    public function getMudaList()
+    {
+        return $this::get();
+        // ->where('create_user',=,);
     }
 }

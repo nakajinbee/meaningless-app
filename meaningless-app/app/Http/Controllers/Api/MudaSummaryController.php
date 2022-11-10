@@ -16,12 +16,8 @@ class MudaSummaryController extends Controller
      */
     public function index()
     {
-        try{
-            $muda = new TMuda();
-            $summary = $muda->getSummary();
-        } catch(Exception $e){
-            return response()->json($e->getMessage());
-        }
+        $muda = new TMuda();
+        $summary = $muda->getSummary();
         return response()->json($summary);            
     }
 
