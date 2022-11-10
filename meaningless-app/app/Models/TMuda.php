@@ -27,7 +27,9 @@ class TMuda extends Model
 
     public function getMudaList()
     {
-        return $this::get();
+        return $this::select('id','waste_time','created_at','updated_at')
+                    ->selectRaw('char_length(muda_text) as muda_text')
+                    ->get();
         // ->where('create_user',=,);
     }
 }

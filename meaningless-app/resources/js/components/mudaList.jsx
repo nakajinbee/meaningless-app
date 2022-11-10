@@ -36,9 +36,9 @@ export default function MudaList() {
                     {mudaList.map((muda,idx)=>(
                         <tr>
                             <td style={{textAlign:'center', width:'100px'}}><button className={'secondary-button list-button'}>更新</button></td>
-                            <td>{muda.id}</td>
-                            <td>{muda.muda_text}</td>
-                            <td>{muda.waste_time}秒</td>
+                            <td style={{textAlign:'right',width:'50px'}}>{muda.id}</td>
+                            <td style={{textAlign:'right'}}>{muda.muda_text}</td>
+                            <td style={{textAlign:'right'}}>{muda.waste_time}秒</td>
                             <td>{muda.created_dt}</td>
                             <td>{muda.updated_dt}</td>
                         </tr>
