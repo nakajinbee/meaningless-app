@@ -26,15 +26,12 @@ export default function MudaHome() {
                     <button className={"secondary-button sub-button"}>無駄を登録する</button>
                 </div>
                 {/* END ページサブボタンエリア */}
-
-                {/* サマリー表示 */}
-                <MudaSummary />
-                {/* END サマリー表示 */}
-
-                {/* リスト表示 */}
-                <MudaList />
-                {/* END リスト表示 */}
-
+                <div style={{paddingTop:'10px'}}>
+                    <MudaSummary />
+                </div>
+                <div style={{paddingTop:'30px'}} >
+                    <MudaList />
+                </div>
             </div>
             {/*　END ページ部分 */}
         </>

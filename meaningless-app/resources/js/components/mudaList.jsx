@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { Table } from 'react-bootstrap';
 
 export default function MudaList() {
         
@@ -21,28 +21,31 @@ export default function MudaList() {
 
     return (
         <>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>id</th>
-                    <th>入力文字数</th>
-                    <th>無駄にした時間</th>
-                    <th>登録日時</th>
-                    <th>更新日時</th>
-                </tr>
-                {mudaList.map((muda,idx)=>(
+            <Table striped bordered>
+                <thead>
                     <tr>
-                        <th><button>更新</button></th>
-                        <td>{muda.id}</td>
-                        <td>{muda.muda_text}</td>
-                        <td>{muda.waste_time}</td>
-                        <td>{muda.created_dt}</td>
-                        <td>{muda.updated_dt}</td>
+                        <th></th>
+                        <th>＃</th>
+                        <th>入力文字数</th>
+                        <th>無駄にした時間</th>
+                        <th>登録日時</th>
+                        <th>更新日時</th>
                     </tr>
-                )
-                )}
-                <tr></tr>
-            </table>
+                </thead>
+                <tbody>
+                    {mudaList.map((muda,idx)=>(
+                        <tr>
+                            <td style={{textAlign:'center', width:'100px'}}><button className={'secondary-button list-button'}>更新</button></td>
+                            <td>{muda.id}</td>
+                            <td>{muda.muda_text}</td>
+                            <td>{muda.waste_time}秒</td>
+                            <td>{muda.created_dt}</td>
+                            <td>{muda.updated_dt}</td>
+                        </tr>
+                    )
+                    )}
+                </tbody>
+            </Table>
         </>
     )
 }

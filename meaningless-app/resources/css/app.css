@@ -87,6 +87,21 @@
     transform: translateY(4px);
 }
 
+.list-button{
+    width: 80px;
+    height: 35px;
+    font-size:18px;
+    border-radius:5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.list-button:active{
+    transform: translateY(4px);
+}
+
 .sub-button{
     height: 40px;
     font-size: 20px;
