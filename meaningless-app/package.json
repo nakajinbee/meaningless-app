@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "react-bootstrap": "^2.6.0",
+        "react-router-dom": "^6.4.3",
         "react-textarea-autosize": "^8.3.4"
     }
 }
