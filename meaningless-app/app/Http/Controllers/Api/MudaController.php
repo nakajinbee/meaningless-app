@@ -30,6 +30,7 @@ class MudaController extends Controller
     public function store(Request $request)
     {
         $muda = new TMuda();
+        $muda->muda_text = $request->mudaText;
         $muda->waste_time = $request->mudaTime;
         $muda->save();
         return response()->json(["無駄を登録しました。"]);

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export default function PageTitleArea({ title, subtitle, hasData =false, submitAction, isHome=false}) {
     const buttonLabel = hasData ? "更新": "登録";
+    const navigate = useNavigate();
 
     return(
         <>
@@ -15,7 +17,7 @@ export default function PageTitleArea({ title, subtitle, hasData =false, submitA
                 {isHome ? (""):
                 <div className={"page-top-btn-area"}>
                     <button className={"primary-button form-main-button"} onClick={submitAction}>{buttonLabel}</button>
-                    <button className={"secondary-button form-main-button"}>戻る</button>
+                    <button className={"secondary-button form-main-button"} onClick={()=> navigate(-1)}>戻る</button>
                 </div>
                 }
                 {/* ボタンエリア */}
