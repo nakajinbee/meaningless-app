@@ -10,7 +10,8 @@ export default function Contents(){
             <BrowserRouter>
                 <Routes>
                     <Route path={'/'} element={<MudaHome />} />
-                    <Route path={'/muda/regist'} element={<MudaEdit />} />
+                    <Route path={'/muda/'} element={<MudaEdit />} />
+                    <Route path={'/muda/:id'} element={<MudaEdit />} />
                </Routes>
             </BrowserRouter>
          </div>

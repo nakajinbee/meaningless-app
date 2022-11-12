@@ -32,4 +32,13 @@ class TMuda extends Model
                     ->get();
         // ->where('create_user',=,);
     }
+
+    public function updateData($request){
+        $result = $this::where('id', '=', $request->id)->update([
+            'muda_text' => $request->mudaText,
+            'waste_time' => $request->mudaTime,
+        ]);
+        
+        return $result;
+    }
 }

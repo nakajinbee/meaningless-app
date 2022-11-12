@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { Table } from 'react-bootstrap';
 
 export default function MudaList() {
         
     const [mudaList, setMudaList] = useState([]);
-  
+    const navigate = useNavigate();
+
     useEffect(() => {
         axios
         .get("http://localhost/api/muda", {
         })
         .then((response) => {
-            console.log(response.data);
             setMudaList(response.data);
-            
         })
         .catch((error) => {
           console.log(error);
@@ -34,8 +35,8 @@ export default function MudaList() {
                 </thead>
                 <tbody>
                     {mudaList.map((muda,idx)=>(
-                        <tr>
-                            <td style={{textAlign:'center', width:'100px'}}><button className={'secondary-button list-button'}>更新</button></td>
+                        <tr key={idx}>
+                            <td style={{textAlign:'center', width:'100px'}}><button onClick={()=>navigate(`/muda/${muda.id}`)}className={'secondary-button list-button'}>更新</button></td>
                             <td style={{textAlign:'right',width:'50px'}}>{muda.id}</td>
                             <td style={{textAlign:'right'}}>{muda.muda_text}</td>
                             <td style={{textAlign:'right'}}>{muda.waste_time}秒</td>

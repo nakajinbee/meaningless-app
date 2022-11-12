@@ -22,7 +22,7 @@ export default function MudaHome() {
                 <div className={"error-message-area"}></div>
                 {/* ページサブボタンエリア */}
                 <div className={"sub-button-area"}>
-                    <Link to={`/muda/regist`}>
+                    <Link to={`/muda`}>
                         <button className={"secondary-button sub-button"}>無駄を登録する</button>
                     </Link>
                 </div>

@@ -11,7 +11,6 @@ export default function MudaSummary() {
         .get("http://localhost/api/muda-summary", {
         })
         .then((response) => {
-            console.log(response.data);
             setSumMudaText(response.data.muda_summary);
             setSumMudaTime(response.data.waste_time);
         })

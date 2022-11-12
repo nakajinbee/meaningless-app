@@ -33,7 +33,7 @@ class MudaController extends Controller
         $muda->muda_text = $request->mudaText;
         $muda->waste_time = $request->mudaTime;
         $muda->save();
-        return response()->json(["無駄を登録しました。"]);
+        return response()->json(["登録しました。"]);
     }
 
     /**
@@ -44,7 +44,9 @@ class MudaController extends Controller
      */
     public function show($id)
     {
-        //
+        $muda = new TMuda();
+        $mudaData = $muda::find($id);
+        return $mudaData;
     }
 
     /**
@@ -54,9 +56,17 @@ class MudaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        try{
+            $muda = new TMuda();
+            $result = $muda->updateData($request);
+            return response()->json(["更新しました。"]);
+
+        } catch(Exception $e){
+            return "失敗";
+            return $e->getMessage();
+        }
     }
 
     /**
