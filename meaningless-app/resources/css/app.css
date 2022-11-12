@@ -1,4 +1,5 @@
 .page-title-area{
+    margin-top:60px;
     width:100%;
     height:70px;
     border-bottom:solid 1px gray;
@@ -37,8 +38,9 @@
 }
 
 .header {
+    position: fixed;
     height : 60px;
-    display :flex;
+    width: 100%;
     background-color : lightslategray;
 }
 
