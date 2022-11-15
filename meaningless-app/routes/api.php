@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\MudaController;
 use App\Http\Controllers\Api\MudaSummaryController;
+use App\Http\Controllers\Api\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,14 @@ use App\Http\Controllers\Api\MudaSummaryController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::post('login', [LoginController::class, 'login']);
+Route::post('logout', [LoginController::class, 'logout']);
+
+Route::middleware('auth:sanctum')->get('user', function (Request $request) {
+    Route::apiResource('/muda', MudaController::class);
+    Route::apiResource('/muda-summary', MudaSummaryController::class); 
     return $request->user();
 });
 
-Route::apiResource('/muda', MudaController::class);
-Route::apiResource('/muda-summary', MudaSummaryController::class);
+
 
