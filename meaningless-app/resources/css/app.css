@@ -1,51 +1,50 @@
-.page-title-area{
-    margin-top:60px;
-    width:100%;
-    height:70px;
-    border-bottom:solid 1px gray;
-    display:inline-block;
+.page-title-area {
+    margin-top: 60px;
+    width: 100%;
+    height: 70px;
+    border-bottom: solid 1px gray;
+    display: inline-block;
 }
 .page-title-text-area {
-    float:left;
+    float: left;
     margin-left: 20px;
 }
 
 .page-top-btn-area {
-    float:right;
-    margin: 13px 20px ;
+    float: right;
+    margin: 13px 20px;
     display: flex;
     justify-content: space-between;
 }
 
-.page-top-btn-area button{
-    margin-left:10px;
+.page-top-btn-area button {
+    margin-left: 10px;
 }
 
-
-.page-title-text{
+.page-title-text {
     font-size: 28px;
 }
 
-.page-subtitle-text{
-    color:gray;
+.page-subtitle-text {
+    color: gray;
 }
 
-.header-text{
-    display : inline-block;
-    margin-left : 20px;
-    font-size : 35px;
-    color : white;
+.header-text {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 35px;
+    color: white;
 }
 
 .header {
     position: fixed;
-    height : 60px;
+    height: 60px;
     width: 100%;
-    background-color : lightslategray;
+    background-color: lightslategray;
 }
 
 .fotter {
-    background-color : gainsboro;
+    background-color: gainsboro;
     width: 100%;
     height: 40px;
     position: fixed;
@@ -53,90 +52,102 @@
 }
 
 .fotter-text {
-    color:gray;
+    color: gray;
     text-align: center;
     margin-top: 7px;
 }
 
-.main-contents-area{
-    padding:0 20px
+.main-contents-area {
+    padding: 0 20px;
 }
 
-.sub-button-area{
-    width:100%;
-    height:70px;
+.sub-button-area {
+    width: 100%;
+    height: 70px;
 }
-.sub-button-area button{
+.sub-button-area button {
     margin-top: 13px;
 }
 
-.sub-button-area div{
+.sub-button-area div {
     display: inline-block;
 }
 
-.form-main-button{
+.form-main-button {
     width: 120px;
     height: 45px;
-    font-size:28px;
-    border-radius:5px;
+    font-size: 28px;
+    border-radius: 5px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     transition: 0.2s;
 }
 
-.form-main-button:active{
+.form-main-button:active {
     transform: translateY(4px);
 }
 
-.list-button{
+.list-button {
     width: 80px;
     height: 35px;
-    font-size:18px;
-    border-radius:5px;
+    font-size: 18px;
+    border-radius: 5px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     transition: 0.2s;
 }
 
-.list-button:active{
+.list-button:active {
     transform: translateY(4px);
 }
 
-.sub-button{
+.sub-button {
     height: 40px;
     font-size: 20px;
-    border-radius:5px
+    border-radius: 5px;
 }
 
-.primary-button{
+.primary-button {
     border: solid 2px lightslategray;
     border-bottom: 3px solid rgb(58, 72, 86);
     background-color: lightslategray;
     color: white;
 }
 
-.primary-button:active{
+.primary-button:active {
     border-bottom: solid 2px lightslategray;
 }
 
-
-.secondary-button{
+.secondary-button {
     border: solid 2px gray;
     border-bottom: 3px solid gray;
     background-color: white;
 }
 
-.secondary-button:active{
+.secondary-button:active {
     border-bottom: solid 2px gray;
 }
 
-.muda-textarea{
-    width:50%
+.muda-textarea {
+    width: 50%;
 }
 
-.muda-display-time{
-    float:right;
-    margin-top:10px;
+.muda-display-time {
+    float: right;
+    margin-top: 10px;
+}
+
+.login-card {
+    margin-top: 40px;
+    width: 50%;
+    height: 80%;
+    display: inline-block;
+    margin-top: 120px;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
 }
