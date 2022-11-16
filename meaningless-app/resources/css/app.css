@@ -140,7 +140,6 @@
 }
 
 .login-card {
-    margin-top: 40px;
     width: 50%;
     height: 80%;
     display: inline-block;
@@ -150,4 +149,24 @@
 .login-page {
     display: flex;
     justify-content: center;
+    height: 100%;
+}
+
+.login-card input {
+    width: 100%;
+}
+
+.login-card button {
+    margin-top: 30px;
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    background-color: gainsboro;
+    border: 1px solid #343a40;
+    border-bottom: 3px solid #343a40;
+    border-radius: 5px;
+}
+
+.login-card button:active {
+    border-bottom: solid 2px gray;
 }
