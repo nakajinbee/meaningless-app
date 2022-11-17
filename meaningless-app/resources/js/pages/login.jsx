@@ -8,8 +8,17 @@ export default function Login() {
         'meta[name="csrf-token"]'
     ).content;
 
-    const [loginId, setLoginId] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/sanctum/csrf-cookie', { withCredentials: true })
+        .then((response) => {
+            axios.post("/api/login", {
+                email,
+                password
+            });
+    });
 
     return (
         <>
@@ -21,12 +30,12 @@ export default function Login() {
                         <Card.Text>
                             <form>
                                 <div>
-                                    <h5>ログインID</h5>
+                                    <h5>メールアドレス</h5>
                                     <input
-                                        name="loginId"
-                                        placeholder="ログインIDを入力してください"
+                                        name="email"
+                                        placeholder="メールアドレスを入力してください"
                                         onChange={(e) =>
-                                            setLoginId(e.target.value)
+                                            setEmail(e.target.value)
                                         }
                                     />
                                 </div>
